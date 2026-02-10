@@ -1,7 +1,7 @@
 
 stTariq=352
 stRafay=623
-stJohn=400
+stAkber=400
 
 # Dummy user details
 
@@ -50,7 +50,7 @@ while True:
         break
     elif (fname == "Akber") and (lname == "Ali") and (clss == "10") and (sec == "a"):
         for i in range(300 , 800 + 1):
-            if stJohn == i:
+            if stAkber == i:
                 print(f"Name: {fname} {lname}, Roll No: {i}")
                 break
             else:
