@@ -1,5 +1,5 @@
 
-x = 32
+x = 132
 
 while True:
     r = int(input("Enter the range number, to find the secret number within the range: "))
