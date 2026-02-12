@@ -1,97 +1,53 @@
-Skip to main content
-Google Classroom
-Classroom
-Web Development with Python
-Home
-Calendar
-Enrolled
-To do
-W
-Web Development with Python
-Archived classes
-Settings
-Material details
-Mix program (if, else, while, for)
-YouExcel Data Science
-•
-12:03
-st_grading system all.py
-Text
+print("\n======= You Excel Attendance System =======\n")
+webST_count=1
+while webST_count <= 5:
+    print(f"\n---- Web Development with Python Students ({webST_count}) ----\n")
 
-Class comments
+    name = input("Student Full Name: ")
+    att = eval(input("Attendance Percentage: "))
+    performance = input("Performance According to management: ")
 
-Add class comment…
-
-#student grading system
-
-print("****** Student Grading System ************")
-student_count=1
-while student_count <= 5:
-    print(f"************* Student {student_count}*********")
-    # Input
-    name = input("Your Full Name:")
-    perc = eval(input("Percentage:"))   
-    # if-elif-else - Grade   
-    if perc >= 90:
-        grade= "A+"
-        remark = "Wonder Full"
-    elif perc >=80:
-        grade = "A"
-        remark = "Good"
-    elif perc >=70:
-        grade = "B+"
-        remark = "Fair"
-    elif perc >= 60:
-        grade = "B"
-        remark = "Average"   
-    elif perc >=50:
-        grade = "C"
-        remark = "Below Average"
-    elif perc >=40:
-        grade = "D"
-        remark = "Just Passed"
+    if att >= 90:
+        remark = "Excellent Attendance"
+        certificate = "Got the certificate"
+    elif att >=80:
+        remark = "Good Attendance"
+        certificate = "Got the certificate"
+    elif att >=70:
+        remark = "Aur achi hosakti thi"
+        certificate = "Got the certificate"
+    elif att >= 60:
+        remark = "Average Attendance"
+        certificate = "Give reason about the low attendance to get the certificate"
     else:
-        grade="F"
-        remark = "Failed!"
+        remark = "Bad Attendance!"
+        certificate = "Not eligible for the certificate"
         
-    ##nested if - for extra comments based on marks   
-    if perc >=75:
-        if perc >=95:
-            special = "Topper Student! and eligible for 100% scholarship"
-        else:
-            special = "Eligible for 50% scholarship"
-    else:
-        if perc >= 60:
-            special = "work more, Efforts more!"
-        else:
-            special = "Practice Regularly"      
-    ##NEst Loop, For for extra subject analysis
-            
-    print(f"\n Dear {name}, Your Subjects:")
-    subjects = ["Maths","Science","English"]
+
+    print(f"\nResult for {name} \nAttendance Percentage: {att}% \nRemark: {remark} \nCertificate Status: {certificate} \nPerformance: {performance}")
+
+    print(f"\nDear {name}, there are some offers according to your skills:")
     
-    for subject in subjects:
-        if subject == "Maths":
-            sub_marks = perc+ 5 #extra marks for maths
-        elif subject == "Science":
-            sub_marks = perc - 2 #science 
+    skills = ["Python", "Django", "Flask", "Backend Development", "Frontend Development"]
+
+    for skill in skills:
+        if skill == "Python":
+            offer = "Python Developer Internship"
+        elif skill == "Django":
+            offer = "Backend Internship (Django)"
+        elif skill == "Flask":
+            offer = "Backend Internship (Flask)"
+        elif skill == "Backend Development":
+            offer = "Backend Developer Internship (Node / Django)"
+        elif skill == "Frontend Development":
+            offer = "Frontend Developer Internship (React / Tailwind)"
         else:
-            sub_marks = perc - 3 # english 
-            
-        # Nested if in for loop
+            offer = "General IT Training Program"
+    
+        print(f"{skill} : {offer}")
+
         
-        if sub_marks >100:
-            sub_marks = 100
-        elif sub_marks <0:
-            sub_marks =0
-            
-        print(f"{subject} : {sub_marks}")
-        
-    #final result print karna
-        
-    print(f"\n Result for {name} \nPercentage: {perc} \nGrade: {grade} \nRemarks: {remark} \nSpecial: {special}")
-        
-    student_count = student_count+1 
+    webST_count += 1 
     
     
         
