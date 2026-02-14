@@ -1,7 +1,12 @@
 
 print("\n======= Guess the secret word game =========\n")
 
-theWord = "cat"
+print("====== Set the word and the hints for your friend to guess ======\n")
+theWord = input("Enter the word: ")
+
+hint1 = input(f"Give 1st hint for the word {theWord}: ")
+hint2 = input(f"Give 2nd hint for the word {theWord}: ")
+hint3 = input(f"Give 3rd hint for the word {theWord}: ")
 
 guessCount = 5
 hintCount = 3
@@ -18,17 +23,17 @@ while guessCount >= 1:
         
         hint = input(f"\n{hintCount} Hints, Do you want a hint? (yes/no) --> | ").lower()
         if hint == "yes" and hintCount == 3:
-            print(f"\nIt's an animal")
+            print(f"\n{hint3}")
             hintCount -= 1
             print(f"--> {hintCount} hint left")
             continue
         elif hint == "yes" and hintCount == 2:
-            print(f"\nPeople love it.")
+            print(f"\n{hint2}")
             hintCount -= 1
             print(f"--> {hintCount} hints left")
             continue
         elif hint == "yes" and hintCount == 1:
-            print(f"\nMeow Meow.")
+            print(f"\n{hint1}")
             hintCount -= 1
             print(f"--> {hintCount} hints left")
             continue        
